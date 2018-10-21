@@ -32,15 +32,12 @@ public class AnswersFragment extends Fragment {
 
         ArrayList<Integer> Answers = SolutionActivity.getAnswer();
 
-        q = new Question();
-        q.setQuestion();
-
         AnswerAdapter answerAdapter = new AnswerAdapter(Answers,
-                q.Answer,
-                q.optA,
-                q.optB,
-                q.optC,
-                q.optD);
+                SolutionActivity.getAnswers(),
+                SolutionActivity.getOptA(),
+                SolutionActivity.getOptB(),
+                SolutionActivity.getOptC(),
+                SolutionActivity.getOptD());
         solutions.setAdapter(answerAdapter);
 
         return view;

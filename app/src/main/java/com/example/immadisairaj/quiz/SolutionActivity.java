@@ -14,6 +14,12 @@ import butterknife.ButterKnife;
 public class SolutionActivity extends AppCompatActivity {
 
     static ArrayList<Integer> Answers;
+    static ArrayList<String> Question;
+    static ArrayList<String> optA;
+    static ArrayList<String> optB;
+    static ArrayList<String> optC;
+    static ArrayList<String> optD;
+    static ArrayList<Integer> Answer;
 
     @BindView(R.id.viewpager)
     ViewPager viewPager;
@@ -28,6 +34,12 @@ public class SolutionActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Answers = getIntent().getIntegerArrayListExtra("Answer");
+        Answer = getIntent().getIntegerArrayListExtra("Answers");
+        Question = getIntent().getStringArrayListExtra("Question");
+        optA = getIntent().getStringArrayListExtra("optA");
+        optB = getIntent().getStringArrayListExtra("optB");
+        optC = getIntent().getStringArrayListExtra("optC");
+        optD = getIntent().getStringArrayListExtra("optD");
 
         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
@@ -37,5 +49,29 @@ public class SolutionActivity extends AppCompatActivity {
 
     public static ArrayList<Integer> getAnswer() {
         return Answers;
+    }
+
+    public static ArrayList<Integer> getAnswers() {
+        return Answer;
+    }
+
+    public static ArrayList<String> getQuestion() {
+        return Question;
+    }
+
+    public static ArrayList<String> getOptA() {
+        return optA;
+    }
+
+    public static ArrayList<String> getOptB() {
+        return optB;
+    }
+
+    public static ArrayList<String> getOptC() {
+        return optC;
+    }
+
+    public static ArrayList<String> getOptD() {
+        return optD;
     }
 }

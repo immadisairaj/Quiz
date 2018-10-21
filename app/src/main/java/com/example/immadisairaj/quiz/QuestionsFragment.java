@@ -25,10 +25,7 @@ public class QuestionsFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-        Question q = new Question();
-        q.setQuestion();
-
-        QuestionsAdapter questionsAdapter = new QuestionsAdapter(q.question);
+        QuestionsAdapter questionsAdapter = new QuestionsAdapter(SolutionActivity.getQuestion());
         solutions.setAdapter(questionsAdapter);
 
         return view;

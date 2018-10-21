@@ -52,29 +52,39 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        qAndA.setQuestion();
-        q_nos = "Question: " + 1 + " out of " + qAndA.question.size();
 
         ButterKnife.bind(this);
 
-        q_no.setText(q_nos);
+        View loadingIndicator = findViewById(R.id.loading_indicator);
+        loadingIndicator.setVisibility(View.VISIBLE);
+        qAndA.setQuestion(this, this);
+        q_nos = "Question: " + 1 + " out of " + qAndA.question.size();
+
+        q_no.setVisibility(View.GONE);
         questions = findViewById(R.id.question);
-        questions.setText(qAndA.question.get(0));
-        opA.setText(qAndA.optA.get(0));
-        opB.setText(qAndA.optB.get(0));
-        opC.setText(qAndA.optC.get(0));
-        opD.setText(qAndA.optD.get(0));
+        questions.setText("Quiz");
+        opA.setVisibility(View.GONE);
+        opB.setVisibility(View.GONE);
+        opC.setVisibility(View.GONE);
+        opD.setVisibility(View.GONE);
 
         Answers = new ArrayList<>();
 
-        ques = 0;
+        ques = -1;
         score = 0;
         ans = 0;
         nextC = 0;
     }
 
     public void goNext() {
+
+        q_no.setVisibility(View.VISIBLE);
+        opA.setVisibility(View.VISIBLE);
+        opB.setVisibility(View.VISIBLE);
+        opC.setVisibility(View.VISIBLE);
+        opD.setVisibility(View.VISIBLE);
         ques++;
+
         if (ques >= qAndA.question.size()) {
             ques = qAndA.question.size() - 1;
         }
@@ -89,10 +99,11 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void checkScore() {
-        if (qAndA.Answer.get(ques) == ans) {
-            score++;
-            ans = 0;
-        }
+        if (ques != -1)
+            if (qAndA.Answer.get(ques) == ans) {
+                score++;
+                ans = 0;
+            }
     }
 
     public void clickNext(View view) {
@@ -153,6 +164,12 @@ public class QuizActivity extends AppCompatActivity {
     public void clickSolutions(View view) {
         Intent solutions = new Intent(this, SolutionActivity.class);
         solutions.putIntegerArrayListExtra("Answer", Answers);
+        solutions.putStringArrayListExtra("Question", (ArrayList<String>) qAndA.question);
+        solutions.putStringArrayListExtra("optA", (ArrayList<String>) qAndA.optA);
+        solutions.putStringArrayListExtra("optB", (ArrayList<String>) qAndA.optB);
+        solutions.putStringArrayListExtra("optC", (ArrayList<String>) qAndA.optC);
+        solutions.putStringArrayListExtra("optD", (ArrayList<String>) qAndA.optD);
+        solutions.putIntegerArrayListExtra("Answers", (ArrayList<Integer>) qAndA.Answer);
         startActivity(solutions);
     }
 }
