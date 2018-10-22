@@ -107,7 +107,6 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void clickNext(View view) {
-        nextC++;
 
         int selectedId = optionsGroup.getCheckedRadioButtonId();
 
@@ -127,7 +126,8 @@ public class QuizActivity extends AppCompatActivity {
             default:
                 ans = 0;
         }
-        Answers.add(ans);
+        if (ques >= 0)
+            Answers.add(ans);
         if (nextC <= qAndA.question.size()) {
             checkScore();
         }
@@ -142,6 +142,8 @@ public class QuizActivity extends AppCompatActivity {
             optionsGroup.clearCheck();
             goNext();
         }
+
+        nextC++;
     }
 
     public void clickSubmit(View view) {

@@ -1,5 +1,6 @@
 package com.example.immadisairaj.quiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -45,6 +46,14 @@ public class SolutionActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     public static ArrayList<Integer> getAnswer() {

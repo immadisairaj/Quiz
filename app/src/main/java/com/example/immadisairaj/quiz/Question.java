@@ -9,6 +9,7 @@ import android.widget.Toast;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -77,31 +78,14 @@ public class Question {
                             } catch (UnsupportedEncodingException e) {
                                 e.printStackTrace();
                             }
-                            try {
-                                optA.add(java.net.URLDecoder.decode(r.getCorrectAnswer(), "UTF-8"));
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
 
-                            List<String> wrong = r.getIncorrectAnswers();
-                            try {
-                                optB.add(java.net.URLDecoder.decode(wrong.get(0), "UTF-8"));
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
-                            try {
-                                optC.add(java.net.URLDecoder.decode(wrong.get(1), "UTF-8"));
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
-                            try {
-                                optD.add(java.net.URLDecoder.decode(wrong.get(2), "UTF-8"));
-                            } catch (UnsupportedEncodingException e) {
-                                e.printStackTrace();
-                            }
+                            Random random = new Random();
+                            int ran = random.nextInt(4);
+                            setOptions(r, ran);
 
-                            Answer.add(1);
+                            Answer.add(ran+1);
                         }
+                        Log.v("answers", Answer.toString());
                     }
                 }
 
@@ -112,5 +96,107 @@ public class Question {
                 Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    void setOptions(Result r, int ran) {
+        List<String> wrong;
+        switch (ran) {
+            case 0:
+                try {
+                    optA.add(java.net.URLDecoder.decode(r.getCorrectAnswer(), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                wrong = r.getIncorrectAnswers();
+                try {
+                    optB.add(java.net.URLDecoder.decode(wrong.get(0), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optC.add(java.net.URLDecoder.decode(wrong.get(1), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optD.add(java.net.URLDecoder.decode(wrong.get(2), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case 1:
+                try {
+                    optB.add(java.net.URLDecoder.decode(r.getCorrectAnswer(), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                wrong = r.getIncorrectAnswers();
+                try {
+                    optA.add(java.net.URLDecoder.decode(wrong.get(0), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optC.add(java.net.URLDecoder.decode(wrong.get(1), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optD.add(java.net.URLDecoder.decode(wrong.get(2), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case 2:
+                try {
+                    optC.add(java.net.URLDecoder.decode(r.getCorrectAnswer(), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                wrong = r.getIncorrectAnswers();
+                try {
+                    optA.add(java.net.URLDecoder.decode(wrong.get(0), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optB.add(java.net.URLDecoder.decode(wrong.get(1), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optD.add(java.net.URLDecoder.decode(wrong.get(2), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case 3:
+                try {
+                    optD.add(java.net.URLDecoder.decode(r.getCorrectAnswer(), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                wrong = r.getIncorrectAnswers();
+                try {
+                    optA.add(java.net.URLDecoder.decode(wrong.get(0), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optB.add(java.net.URLDecoder.decode(wrong.get(1), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    optC.add(java.net.URLDecoder.decode(wrong.get(2), "UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                break;
+        }
     }
 }
