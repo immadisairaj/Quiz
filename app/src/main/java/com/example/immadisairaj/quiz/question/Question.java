@@ -1,10 +1,15 @@
-package com.example.immadisairaj.quiz;
+package com.example.immadisairaj.quiz.question;
 
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.immadisairaj.quiz.R;
+import com.example.immadisairaj.quiz.api.Api;
+import com.example.immadisairaj.quiz.api.QuizQuestions;
+import com.example.immadisairaj.quiz.api.Result;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

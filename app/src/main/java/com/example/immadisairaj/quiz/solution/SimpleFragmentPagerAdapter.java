@@ -1,4 +1,4 @@
-package com.example.immadisairaj.quiz;
+package com.example.immadisairaj.quiz.solution;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -6,11 +6,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
+import com.example.immadisairaj.quiz.R;
+
+public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    SimpleFragmentPagerAdapter(Context context, FragmentManager fm) {
+    public SimpleFragmentPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }

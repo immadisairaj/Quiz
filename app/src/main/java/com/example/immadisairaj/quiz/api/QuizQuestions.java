@@ -1,6 +1,7 @@
-package com.example.immadisairaj.quiz;
+package com.example.immadisairaj.quiz.api;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package com.example.immadisairaj.quiz;
+package com.example.immadisairaj.quiz.api;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
