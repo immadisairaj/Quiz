@@ -61,5 +61,10 @@ Used Encoding `encode=url3986`
 </table>
 
 ## Built With
+
 - Android Studio (version: 3.2.1)
 - Ubuntu 18.O4
+
+## License
+
+This project is licensed under the MIT License, see the [LICENSE.md](https://github.com/immadisairaj/Quiz/blob/master/LICENSE) for more details.
