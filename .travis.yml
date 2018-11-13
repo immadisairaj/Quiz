@@ -14,8 +14,8 @@ before_install:
   - yes | sdkmanager "platforms;android-28"
 
 script:
-   - ./gradlew build jacocoTestReport
    - ./gradlew build connectedCheck
+   - ./gradlew build jacocoTestReport
 
 before_script:
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
