@@ -1,6 +1,6 @@
 # Quiz Android App
 
-[![Gitter](https://badges.gitter.im/immadisairaj/Quiz.svg)](https://gitter.im/immadisairaj/Quiz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/immadisairaj/Quiz.svg)](https://gitter.im/immadisairaj/Quiz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)    [![Build Status](https://travis-ci.org/immadisairaj/Quiz.svg?branch=master)](https://travis-ci.org/immadisairaj/Quiz)
 
 ## Communication
 
@@ -46,7 +46,6 @@ git clone https://github.com/username/Quiz.git
 ### API Used
 
 Open Trivia [Docs](https://opentdb.com/api_config.php/)
-
 Used Encoding `encode=url3986`
 
 
