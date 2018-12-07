@@ -31,7 +31,7 @@ git clone https://github.com/username/Quiz.git
 
 4. Once this process is complete and Android Studio opens, check the Console for any build errors.
 
-  - _Note:_ If you receive a Gradle sync error titled, "failed to find ...", you should click on the link below the error message (if avaliable) that says _Install missing platform(s) and sync project_ and allow Android studio to fetch you what is missing.
+  - _Note:_ If you receive a Gradle sync error titled, "failed to find ...", you should click on the link below the error message (if available) that says _Install missing platform(s) and sync project_ and allow Android studio to fetch you what is missing.
 
 5. Once all build errors have been resolved, you should be all set to build the app and test it.
 
