@@ -15,6 +15,16 @@
         android:onClick="clickNext"
         android:text="@string/next"
         android:visibility="visible" />
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:onClick="clickPrev"
+        android:text="@string/prev"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/submit"
