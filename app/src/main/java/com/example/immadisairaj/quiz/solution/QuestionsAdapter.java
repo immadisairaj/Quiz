@@ -29,7 +29,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
     @Override
     public void onBindViewHolder(@NonNull QuestionsAdapter.QuestionsViewHolder questionsViewHolder, int i) {
-        String qus = (i + 1) + " Question";
+        String qus ="Q."+(i + 1);
         String question = Questions.get(i);
 
         questionsViewHolder.question.setText(qus);

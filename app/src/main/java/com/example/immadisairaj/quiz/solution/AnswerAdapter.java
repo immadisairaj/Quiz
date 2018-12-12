@@ -40,7 +40,7 @@ public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.AnswerView
 
     @Override
     public void onBindViewHolder(@NonNull AnswerViewHolder answerViewHolder, int i) {
-        String qus = (i + 1) + " Question";
+        String qus = "Q."+(i + 1);
         String ans;
         String corr = null;
 

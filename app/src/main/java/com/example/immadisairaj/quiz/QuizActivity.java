@@ -64,7 +64,7 @@ public class QuizActivity extends AppCompatActivity {
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.VISIBLE);
         qAndA.setQuestion(this, this);
-        q_nos = "Question: " + 1 + " out of " + qAndA.question.size();
+        q_nos = "Question: " + 1 + "/" + qAndA.question.size();
 
         q_no.setVisibility(View.GONE);
         questions = findViewById(R.id.question);
@@ -141,7 +141,7 @@ public class QuizActivity extends AppCompatActivity {
             ques = qAndA.question.size() - 1;
         }
 
-        q_nos = "Question: " + (ques + 1) + " out of " + qAndA.question.size();
+        q_nos = "Question: " + (ques + 1) + "/" + qAndA.question.size();
         q_no.setText(q_nos);
         questions.setText(qAndA.question.get(ques));
         opA.setText(qAndA.optA.get(ques));
@@ -224,8 +224,7 @@ public class QuizActivity extends AppCompatActivity {
         opC.setVisibility(View.VISIBLE);
         opD.setVisibility(View.VISIBLE);
         ques--;
-
-        q_nos = "Question: " + (ques + 1) + " out of " + qAndA.question.size();
+        q_nos = "Question: " + (ques + 1) + "/" + qAndA.question.size();
         q_no.setText(q_nos);
         questions.setText(qAndA.question.get(ques));
         opA.setText(qAndA.optA.get(ques));
@@ -265,6 +264,11 @@ public class QuizActivity extends AppCompatActivity {
 
         Button ans = findViewById(R.id.b_solution);
         ans.setVisibility(View.VISIBLE);
+        prevButton.setVisibility(View.INVISIBLE);
+        opA.setClickable(false);
+        opB.setClickable(false);
+        opC.setClickable(false);
+        opD.setClickable(false);
     }
 
     public void clickSolutions(View view) {

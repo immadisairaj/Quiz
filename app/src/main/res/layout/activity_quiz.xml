@@ -3,17 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".QuizActivity">
 
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:onClick="clickNext"
+        android:padding="5dp"
         android:text="@string/next"
+        android:textColor="@color/colorPrimaryDark"
         android:visibility="visible" />
     <Button
         android:id="@+id/prev"
@@ -27,90 +31,126 @@
         android:visibility="visible" />
 
     <Button
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:onClick="clickPrev"
+        android:padding="5dp"
+        android:text="@string/prev"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible" />
+
+    <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:onClick="clickSubmit"
+        android:padding="5dp"
         android:text="@string/submit"
+        android:textColor="@color/colorPrimaryDark"
         android:visibility="invisible" />
 
     <Button
         android:id="@+id/b_solution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:onClick="clickSolutions"
+        android:padding="5dp"
         android:text="@string/view_answer"
+        android:textColor="@color/colorPrimaryDark"
         android:visibility="invisible" />
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/q_numbers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:textSize="30sp" />
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
 
             <RadioGroup
                 android:id="@+id/options"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:padding="10dp">
 
                 <RadioButton
                     android:id="@+id/optionA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/roundable"
                     android:padding="10dp"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
 
                 <RadioButton
                     android:id="@+id/optionB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundable"
                     android:padding="10dp"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
 
                 <RadioButton
                     android:id="@+id/optionC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundable"
                     android:padding="10dp"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
 
                 <RadioButton
                     android:id="@+id/optionD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundable"
                     android:padding="10dp"
-                    android:textSize="20sp" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
 
             </RadioGroup>
 
         </LinearLayout>
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
     <ProgressBar
         android:id="@+id/loading_indicator"

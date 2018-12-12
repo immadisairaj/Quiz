@@ -4,29 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    android:background="@drawable/roundable"
     android:orientation="vertical"
     android:padding="5dp">
 
     <TextView
         android:id="@+id/tv_question"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:textSize="25sp"
-        tools:text="Question" />
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        tools:text="Q" />
 
     <TextView
         android:id="@+id/tv_answered"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:padding="5dp"
         android:textSize="19sp"
+        android:textColor="@color/colorPrimary"
         tools:text="Answered" />
 
     <TextView
         android:id="@+id/tv_correct"
         android:layout_width="match_parent"
-        android:layout_height="28dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="19sp"
         tools:text="Correct Answer" />
 
