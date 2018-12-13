@@ -23,6 +23,7 @@ public class QuizActivity extends AppCompatActivity {
     Question qAndA = new Question();
 
     int ques, score, ans, nextC;
+    boolean submit = true;
 
     ArrayList<Integer> Answers;
 
@@ -251,6 +252,10 @@ public class QuizActivity extends AppCompatActivity {
     public void clickSubmit(View view) {
         clickNext(view);
 
+        if(submit)
+            checkScore();
+        submit = false;
+
         prevButton.setVisibility(View.INVISIBLE);
         opA.setClickable(false);
         opB.setClickable(false);
@@ -258,7 +263,6 @@ public class QuizActivity extends AppCompatActivity {
         opD.setClickable(false);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-        checkScore();
         builder.setTitle("Scored " + score + " out of " + qAndA.question.size());
         builder.setPositiveButton("View Solutions", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
