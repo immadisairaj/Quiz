@@ -1,16 +1,15 @@
 package com.example.immadisairaj.quiz;
 
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.immadisairaj.quiz.question.Question;
 
@@ -251,27 +250,31 @@ public class QuizActivity extends AppCompatActivity {
 
     public void clickSubmit(View view) {
         clickNext(view);
-        checkScore();
-        Context context = getApplicationContext();
-        CharSequence text = "Scored " + score + " out of " + qAndA.question.size();
-        int duration = Toast.LENGTH_SHORT;
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-        Button submit = findViewById(R.id.submit);
-        submit.setVisibility(View.INVISIBLE);
-
-        Button ans = findViewById(R.id.b_solution);
-        ans.setVisibility(View.VISIBLE);
         prevButton.setVisibility(View.INVISIBLE);
         opA.setClickable(false);
         opB.setClickable(false);
         opC.setClickable(false);
         opD.setClickable(false);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+        checkScore();
+        builder.setTitle("Scored " + score + " out of " + qAndA.question.size());
+        builder.setPositiveButton("View Solutions", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                clickSolutions();
+            }
+        });
+        builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                System.exit(0);
+            }
+        });
+        AlertDialog scoreDialog = builder.create();
+        scoreDialog.show();
     }
 
-    public void clickSolutions(View view) {
+    public void clickSolutions() {
         Intent solutions = new Intent(this, SolutionActivity.class);
         solutions.putIntegerArrayListExtra("Answer", Answers);
         solutions.putStringArrayListExtra("Question", (ArrayList<String>) qAndA.question);
