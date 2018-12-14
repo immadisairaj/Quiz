@@ -278,9 +278,6 @@ public class QuizActivity extends AppCompatActivity {
         });
         AlertDialog scoreDialog = builder.create();
         scoreDialog.show();
-        Button button = findViewById(R.id.submit);
-        button.setVisibility(View.INVISIBLE);
-
     }
 
     public void clickSolutions() {
