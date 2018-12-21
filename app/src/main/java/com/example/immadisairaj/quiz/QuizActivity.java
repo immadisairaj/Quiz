@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -62,27 +63,20 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         ButterKnife.bind(this);
-
-        View loadingIndicator = findViewById(R.id.loading_indicator);
-        loadingIndicator.setVisibility(View.VISIBLE);
-        qAndA.setQuestion(this, this);
+        qAndA= (Question)getIntent().getExtras().getSerializable("question");
+        Intent i=getIntent();
+        qAndA=(Question)i.getSerializableExtra("question");
         q_nos = "Question: " + 1 + "/" + qAndA.question.size();
-
-        q_no.setVisibility(View.GONE);
         questions = findViewById(R.id.question);
         questions.setText("Quiz");
         prevButton.setVisibility(View.GONE);
-        opA.setVisibility(View.GONE);
-        opB.setVisibility(View.GONE);
-        opC.setVisibility(View.GONE);
-        opD.setVisibility(View.GONE);
-
         Answers = new ArrayList<>();
 
         ques = -1;
         score = 0;
         ans = 0;
         nextC = 0;
+        goNext();
     }
 
     public void clickNext(View view) {
