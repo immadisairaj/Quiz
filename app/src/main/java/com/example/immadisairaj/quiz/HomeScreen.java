@@ -84,7 +84,7 @@ public class HomeScreen extends AppCompatActivity  {
 
                             q.Answer.add(ran+1);
                         }
-                        Log.v("answers", q.toString());
+                        Log.v("answers", q.Answer.toString());
                     }
                 }
                 progressBar.setVisibility(View.GONE);
