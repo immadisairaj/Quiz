@@ -26,7 +26,7 @@ public class QuizActivity extends AppCompatActivity {
     Question qAndA = new Question();
 
     int ques, score, ans, nextC;
-    boolean submit = true;
+    boolean submit;
 
     ArrayList<Integer> Answers;
 
@@ -76,6 +76,7 @@ public class QuizActivity extends AppCompatActivity {
         score = 0;
         ans = 0;
         nextC = 0;
+        submit = true;
         goNext();
     }
 
@@ -164,7 +165,7 @@ public class QuizActivity extends AppCompatActivity {
     public void checkScore() {
         if (ques != -1)
             for (int i = 0; i < Answers.size(); i++) {
-                if (qAndA.Answer.get(i) == Answers.get(i)) {
+                if (qAndA.Answer.get(i).equals(Answers.get(i))) {
                     score++;
                 }
             }
