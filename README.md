@@ -72,6 +72,10 @@ Used Encoding `encode=url3986`
 - Android Studio (version: 3.2.1)
 - Ubuntu 18.O4
 
+## Code of Conduct
+
+This project Code of Conduct is under the Contributor Covenant, see the [CODE_OF_CONDUCT.md](https://github.com/immadisairaj/Quiz/blob/master/CODE_OF_CONDUCT.md) for more details.
+
 ## License
 
 This project is licensed under the MIT License, see the [LICENSE.md](https://github.com/immadisairaj/Quiz/blob/master/LICENSE) for more details.
