@@ -63,7 +63,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         ButterKnife.bind(this);
-        qAndA= (Question)getIntent().getExtras().getSerializable("question");
+//        qAndA= (Question)getIntent().getExtras().getSerializable("question");
         Intent i=getIntent();
         qAndA=(Question)i.getSerializableExtra("question");
         q_nos = "Question: " + 1 + "/" + qAndA.question.size();

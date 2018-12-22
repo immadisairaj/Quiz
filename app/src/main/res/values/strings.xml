@@ -9,6 +9,7 @@
     <string name="answers">Answers</string>
     <string name="q_reference">Questions</string>
     <string name="title_activity_home_screen">Home_screen</string>
-    <string name="start">START !</string>
+    <string name="start">START</string>
     <string name="so_lets_start_the_quiz">So lets start the quiz !</string>
+    <string name="take_quiz">Take Quiz</string>
 </resources>

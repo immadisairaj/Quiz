@@ -80,13 +80,13 @@
                 android:id="@+id/options"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="10dp">
+                android:layout_marginTop="@dimen/_30dp"
+                android:padding="@dimen/_10dp">
 
                 <RadioButton
                     android:id="@+id/optionA"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="@dimen/_70dp"
                     android:background="@drawable/roundable"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimaryDark"
@@ -95,32 +95,32 @@
                 <RadioButton
                     android:id="@+id/optionB"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="@dimen/_70dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:background="@drawable/roundable"
-                    android:padding="10dp"
+                    android:padding="@dimen/_10dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/_15sp" />
 
                 <RadioButton
                     android:id="@+id/optionC"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="@dimen/_70dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:background="@drawable/roundable"
-                    android:padding="10dp"
+                    android:padding="@dimen/_10dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/_15sp" />
 
                 <RadioButton
                     android:id="@+id/optionD"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="@dimen/_70dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:background="@drawable/roundable"
-                    android:padding="10dp"
+                    android:padding="@dimen/_10dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/_15sp" />
 
             </RadioGroup>
 

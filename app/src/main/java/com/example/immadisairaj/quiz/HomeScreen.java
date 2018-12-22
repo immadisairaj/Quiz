@@ -87,7 +87,7 @@ public class HomeScreen extends AppCompatActivity  {
                         Log.v("answers", q.Answer.toString());
                     }
                 }
-                progressBar.setVisibility(View.GONE);
+                progressBar.setVisibility(View.INVISIBLE);
                 start.setClickable(true);
                 Intent intent=new Intent(HomeScreen.this,QuizActivity.class);
                 intent.putExtra("question",q);
@@ -97,8 +97,9 @@ public class HomeScreen extends AppCompatActivity  {
 
             @Override
             public void onFailure(Call<QuizQuestions> call, Throwable t) {
+
                 Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
+                progressBar.setVisibility(View.INVISIBLE);
                 start.setClickable(true);
             }
         });

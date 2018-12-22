@@ -1,69 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".HomeScreen">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="195dp"
+        android:layout_height="229dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_iconfinder" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="69dp"
         android:layout_height="66dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="8dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/home_start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="362dp"
-        android:layout_height="334dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/my_button_bg"
-        android:fontFamily="@font/orbitron_medium"
-        android:gravity="center"
-        android:padding="1dp"
-        android:text="@string/so_lets_start_the_quiz"
-        android:textColor="@android:color/white"
-        android:textSize="46sp"
-        app:layout_constraintBottom_toTopOf="@+id/home_start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/home_start"
-        android:layout_width="249dp"
+        android:layout_width="280dp"
         android:layout_height="49dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/my_button_bg"
-        android:fontFamily="@font/orbitron_medium"
-        android:text="@string/start"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:text="@string/take_quiz"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible" />
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
+
+
