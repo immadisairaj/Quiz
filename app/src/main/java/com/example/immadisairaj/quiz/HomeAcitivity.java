@@ -24,14 +24,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class HomeScreen extends AppCompatActivity  {
+public class HomeAcitivity extends AppCompatActivity  {
     Button start;
     ProgressBar progressBar;
     Question q;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_screen);
+        setContentView(R.layout.activity_home);
         start=findViewById(R.id.home_start);
         progressBar=findViewById(R.id.progressBar2);
         start.setOnClickListener(onClickListener);
@@ -89,7 +89,7 @@ public class HomeScreen extends AppCompatActivity  {
                 }
                 progressBar.setVisibility(View.INVISIBLE);
                 start.setClickable(true);
-                Intent intent=new Intent(HomeScreen.this,QuizActivity.class);
+                Intent intent=new Intent(HomeAcitivity.this,QuizActivity.class);
                 intent.putExtra("question",q);
                 startActivity(intent);
 

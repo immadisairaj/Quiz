@@ -6,7 +6,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".HomeScreen">
+    tools:context=".HomeAcitivity">
 
 
     <ImageView
