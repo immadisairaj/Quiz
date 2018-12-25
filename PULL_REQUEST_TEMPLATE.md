@@ -1,4 +1,6 @@
-Fixes #Issue_Number
+Fixes #[Add issue number here. Note: This will automatically close the issue. If you do not solve the issue entirely, please change the message e.g. "First steps for issues #IssueNumber]
+
+Changes: [Add here what changes were made in this issue and if possible provide links.]
 
 Please make sure these boxes are checked before submitting your pull request - thanks you!
 
