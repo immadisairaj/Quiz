@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity  {
     ProgressBar progressBar;
     Question q;
     String difficulty;
-    int category;
+    String category;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,15 +67,17 @@ public class HomeActivity extends AppCompatActivity  {
                 getString(R.string.difficulty_key),
                 getString(R.string.medium_value)
         );
-        category=sharedPrefs.getInt(
-                getString(R.string.category_key),Integer.parseInt(getString(R.string.gk_value))
+        category=sharedPrefs.getString(
+                getString(R.string.category_key),
+                getString(R.string.medium_value)
         );
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Api api = retrofit.create(Api.class);
-        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple",category);
+        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple", Integer.valueOf(category));
         call.enqueue(new Callback<QuizQuestions>() {
             @Override
             public void onResponse(Call<QuizQuestions> call, Response<QuizQuestions> response) {
