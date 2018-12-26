@@ -264,8 +264,8 @@ public class QuizActivity extends AppCompatActivity {
         final ProgressBar progressBar = alertLayout.findViewById(R.id.circularProgressbar);
         final TextView textView = alertLayout.findViewById(R.id.tv);
         Drawable drawable = getResources().getDrawable(R.drawable.circular);
-        progressBar.setMax(10);
-        progressBar.setSecondaryProgress(10);
+        progressBar.setMax(qAndA.question.size());
+        progressBar.setSecondaryProgress(qAndA.question.size());
         progressBar.setProgress(score);
         progressBar.setProgressDrawable(drawable);
         int percentage=(score*100)/qAndA.question.size();
