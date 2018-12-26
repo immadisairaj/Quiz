@@ -20,7 +20,7 @@
             android:label="Solutions"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HomeAcitivity"
+            android:name=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" >
             <intent-filter>

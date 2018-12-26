@@ -24,7 +24,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class HomeAcitivity extends AppCompatActivity  {
+public class HomeActivity extends AppCompatActivity  {
     Button start;
     ProgressBar progressBar;
     Question q;
@@ -89,7 +89,7 @@ public class HomeAcitivity extends AppCompatActivity  {
                 }
                 progressBar.setVisibility(View.INVISIBLE);
                 start.setClickable(true);
-                Intent intent=new Intent(HomeAcitivity.this,QuizActivity.class);
+                Intent intent=new Intent(HomeActivity.this,QuizActivity.class);
                 intent.putExtra("question",q);
                 startActivity(intent);
 
