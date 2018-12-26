@@ -65,7 +65,6 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         ButterKnife.bind(this);
-//        qAndA= (Question)getIntent().getExtras().getSerializable("question");
         Intent i = getIntent();
         qAndA = (Question) i.getSerializableExtra("question");
         q_nos = "Question: " + 1 + "/" + qAndA.question.size();
@@ -269,7 +268,8 @@ public class QuizActivity extends AppCompatActivity {
         progressBar.setSecondaryProgress(10);
         progressBar.setProgress(score);
         progressBar.setProgressDrawable(drawable);
-        textView.setText(score + "0%");
+        int percentage=(score*100)/qAndA.question.size();
+        textView.setText(percentage+"%");
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("RESULT");
         alert.setMessage("You scored "+score + " out of " + qAndA.question.size()+" questions.");
