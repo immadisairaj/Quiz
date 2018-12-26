@@ -2,12 +2,14 @@ package com.example.immadisairaj.quiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -64,8 +66,8 @@ public class QuizActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 //        qAndA= (Question)getIntent().getExtras().getSerializable("question");
-        Intent i=getIntent();
-        qAndA=(Question)i.getSerializableExtra("question");
+        Intent i = getIntent();
+        qAndA = (Question) i.getSerializableExtra("question");
         q_nos = "Question: " + 1 + "/" + qAndA.question.size();
         questions = findViewById(R.id.question);
         questions.setText("Quiz");
@@ -122,7 +124,7 @@ public class QuizActivity extends AppCompatActivity {
             prevButton.setVisibility(View.VISIBLE);
 
         nextC++;
-        ans=0;
+        ans = 0;
     }
 
     public void goNext() {
@@ -249,7 +251,7 @@ public class QuizActivity extends AppCompatActivity {
     public void clickSubmit(View view) {
         clickNext(view);
 
-        if(submit)
+        if (submit)
             checkScore();
         submit = false;
 
@@ -258,23 +260,40 @@ public class QuizActivity extends AppCompatActivity {
         opB.setClickable(false);
         opC.setClickable(false);
         opD.setClickable(false);
+        LayoutInflater inflater = getLayoutInflater();
+        View alertLayout = inflater.inflate(R.layout.alert_dialog, null);
+        final ProgressBar progressBar = alertLayout.findViewById(R.id.circularProgressbar);
+        final TextView textView = alertLayout.findViewById(R.id.tv);
+        Drawable drawable = getResources().getDrawable(R.drawable.circular);
+        progressBar.setMax(10);
+        progressBar.setSecondaryProgress(10);
+        progressBar.setProgress(score);
+        progressBar.setProgressDrawable(drawable);
+        textView.setText(score + "0%");
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("RESULT");
+        alert.setMessage("You scored "+score + " out of " + qAndA.question.size()+" questions.");
+        alert.setView(alertLayout);
+        alert.setCancelable(false);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-        builder.setTitle("Scored " + score + " out of " + qAndA.question.size());
-        builder.setPositiveButton("View Solutions", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                clickSolutions();
-            }
-        });
-        builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
+        alert.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
                 moveTaskToBack(true);
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
             }
         });
-        AlertDialog scoreDialog = builder.create();
-        scoreDialog.show();
+
+        alert.setPositiveButton("View Solutions", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                clickSolutions();
+            }
+        });
+        AlertDialog dialog = alert.create();
+        dialog.show();
     }
 
     public void clickSolutions() {
@@ -288,8 +307,9 @@ public class QuizActivity extends AppCompatActivity {
         solutions.putIntegerArrayListExtra("Answers", (ArrayList<Integer>) qAndA.Answer);
         startActivity(solutions);
     }
+
     @Override
     public void onBackPressed() {
-        Toast.makeText(this,"Back Press is not allowed",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Back Press is not allowed", Toast.LENGTH_LONG).show();
     }
 }
