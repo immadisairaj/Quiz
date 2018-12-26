@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_label">
+        <item>@string/easy</item>
+        <item>@string/medium</item>
+        <item>@string/hard</item>
+    </string-array>
+
+    <string-array name="values">
+        <item>@string/easy_value</item>
+        <item>@string/medium_value</item>
+        <item>@string/hard_value</item>
+    </string-array>
+
+    <string-array name="list_label2">
+        <item>@string/gk</item>
+        <item>@string/computer</item>
+        <item>@string/maths</item>
+        <item>@string/politics</item>
+        <item>@string/history</item>
+        <item>@string/sports</item>
+        <item>@string/entertainment</item>
+        <item>@string/geography</item>
+    </string-array>
+
+    <integer-array name="values2">
+        <item>@string/gk_value</item>
+        <item>@string/computer_value</item>
+        <item>@string/maths_value</item>
+        <item>@string/politics_value</item>
+        <item>@string/history_value</item>
+        <item>@string/sports_value</item>
+        <item>@string/entertainment_value</item>
+        <item>@string/geography_value</item>
+    </integer-array>
+
+</resources>

@@ -1,7 +1,9 @@
 package com.example.immadisairaj.quiz;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,18 +28,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity  {
     Button start;
+    Button filter;
     ProgressBar progressBar;
     Question q;
+    String difficulty;
+    int category;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         start=findViewById(R.id.home_start);
+        filter=findViewById(R.id.home_filter);
         progressBar=findViewById(R.id.progressBar2);
         start.setOnClickListener(onClickListener);
-
-
+        filter.setOnClickListener(onClickListener);
     }
+
     View.OnClickListener onClickListener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -47,17 +53,29 @@ public class HomeActivity extends AppCompatActivity  {
                 view.setClickable(false);
                 fetchApi();
             }
+            else if(view.getId()==R.id.home_filter){
+                Intent intent=new Intent(getApplicationContext(),SettingActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
         }
     };
 
-
     public void fetchApi() {
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        difficulty=sharedPrefs.getString(
+                getString(R.string.difficulty_key),
+                getString(R.string.medium_value)
+        );
+        category=sharedPrefs.getInt(
+                getString(R.string.category_key),Integer.parseInt(getString(R.string.gk_value))
+        );
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Api api = retrofit.create(Api.class);
-        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, "medium", "multiple");
+        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple",category);
         call.enqueue(new Callback<QuizQuestions>() {
             @Override
             public void onResponse(Call<QuizQuestions> call, Response<QuizQuestions> response) {

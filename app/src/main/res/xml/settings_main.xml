@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="@string/medium_value"
+        android:entries="@array/list_label"
+        android:entryValues="@array/values"
+        android:key="@string/difficulty_key"
+        android:title="@string/difficulty" />
+    <ListPreference
+        android:defaultValue="@string/gk_value"
+        android:entries="@array/list_label2"
+        android:entryValues="@array/values2"
+        android:key="@string/category_key"
+        android:title="@string/category" />
+</PreferenceScreen>

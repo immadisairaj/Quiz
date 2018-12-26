@@ -30,9 +30,19 @@
         android:layout_width="280dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:background="@android:color/white"
         android:text="@string/take_quiz"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/home_filter"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
+        android:text="@string/filter"
+        android:background="@android:color/white"
         android:textColor="@color/colorPrimaryDark"
         android:visibility="visible" />
 

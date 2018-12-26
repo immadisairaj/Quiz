@@ -13,5 +13,6 @@ public interface Api {
             @Query("encode") String encode,
             @Query("amount") Integer amount,
             @Query("difficulty") String difficulty,
-            @Query("type") String type);
+            @Query("type") String type,
+            @Query("category") Integer category);
 }

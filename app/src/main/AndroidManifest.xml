@@ -13,22 +13,28 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".QuizActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".SolutionActivity"
             android:label="Solutions"
             android:screenOrientation="portrait" />
         <activity
             android:name=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SettingActivity"
+            android:label="Filter"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.immadisairaj.quiz.HomeActivity"/>
+    </activity>
     </application>
 
 </manifest>

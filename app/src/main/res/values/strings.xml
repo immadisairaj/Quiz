@@ -5,11 +5,49 @@
     <string name="submit">Submit</string>
     <string name="view_answer">View Answer</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="answers">Answers</string>
     <string name="q_reference">Questions</string>
-    <string name="title_activity_activity_home">activity_home</string>
-    <string name="start">START</string>
-    <string name="so_lets_start_the_quiz">So lets start the quiz !</string>
     <string name="take_quiz">Take Quiz</string>
+
+    // labels of list preference
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+
+    <string name="gk">General Knowledge</string>
+    <string name="computer">Computer</string>
+    <string name="maths">Maths</string>
+    <string name="politics">Politics</string>
+    <string name="history">History</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="sports">Sports</string>
+    <string name="geography">Geography</string>
+
+    //keys of list preference
+    <string name="easy_value" translatable="false">easy</string>
+    <string name="medium_value" translatable="false">medium</string>
+    <string name="hard_value" translatable="false">hard</string>
+
+
+    <string name="gk_value" translatable="false">9</string>
+    <string name="computer_value" translatable="false">18</string>
+    <string name="maths_value" translatable="false">19</string>
+    <string name="politics_value" translatable="false">24</string>
+    <string name="history_value" translatable="false">23</string>
+    <string name="entertainment_value" translatable="false">11</string>
+    <string name="sports_value" translatable="false">21</string>
+    <string name="geography_value" translatable="false">22</string>
+
+
+    // list preference key and title
+    <string name="difficulty">Difficulty</string>
+    <string name="difficulty_key" translatable="false">difficulty</string>
+
+    <string name="category">Category</string>
+    <string name="category_key" translatable="false">category</string>
+
+    <string name="filter">Filter</string>
+
+
+
 </resources>
