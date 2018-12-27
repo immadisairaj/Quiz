@@ -15,13 +15,30 @@
     <string name="hard">Hard</string>
 
     <string name="gk">General Knowledge</string>
-    <string name="computer">Computer</string>
-    <string name="maths">Maths</string>
     <string name="politics">Politics</string>
     <string name="history">History</string>
-    <string name="entertainment">Entertainment</string>
     <string name="sports">Sports</string>
     <string name="geography">Geography</string>
+    <string name="any_category">Any Category</string>
+    <string name="entertainment_film">Entertainment: Film</string>
+    <string name="entertainment_books">Entertainment: Books</string>
+    <string name="entertainment_music">Entertainment: Music</string>
+    <string name="entertainment_musical_theatres"><![CDATA[Entertainment: Musicals & Theatres]]></string>
+    <string name="entertainment_television">Entertainment: Television</string>
+    <string name="entertainment_video">Entertainment: Video Games</string>
+    <string name="entertainment_board">Entertainment: Board Games</string>
+    <string name="science_nature"><![CDATA[Science & Nature]]></string>
+    <string name="science_computer">Science: Computers</string>
+    <string name="science_maths">Science: Maths</string>
+    <string name="mythology">Mythology</string>
+    <string name="arts">Arts</string>
+    <string name="celebrity">Celebrities</string>
+    <string name="animal">Animals</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="entertainment_comics">Entertainment: Comics</string>
+    <string name="science_gadgets">Science: Gadgets</string>
+    <string name="entertainment_japanese"><![CDATA[Entertainment: Japanese Anime & Manga]]></string>
+    <string name="entertainment_cartoon"><![CDATA[Entertainment: Cartoon & Animations]]></string>
 
     //keys of list preference
     <string name="easy_value" translatable="false">easy</string>
@@ -30,13 +47,30 @@
 
 
     <string name="gk_value" translatable="false">9</string>
-    <string name="computer_value" translatable="false">18</string>
-    <string name="maths_value" translatable="false">19</string>
     <string name="politics_value" translatable="false">24</string>
     <string name="history_value" translatable="false">23</string>
-    <string name="entertainment_value" translatable="false">11</string>
     <string name="sports_value" translatable="false">21</string>
     <string name="geography_value" translatable="false">22</string>
+    <string name="any_category_value" translatable="false">8</string>
+    <string name="entertainment_film_value" translatable="false">11</string>
+    <string name="entertainment_books_value" translatable="false">10</string>
+    <string name="entertainment_music_value" translatable="false">12</string>
+    <string name="entertainment_musical_theatres_value" translatable="false">13></string>
+    <string name="entertainment_television_value" translatable="false">14</string>
+    <string name="entertainment_video_value" translatable="false">15</string>
+    <string name="entertainment_board_value" translatable="false">16</string>
+    <string name="science_nature_value" translatable="false">17</string>
+    <string name="science_computer_value" translatable="false">18</string>
+    <string name="science_maths_value" translatable="false">19</string>
+    <string name="mythology_value" translatable="false">20</string>
+    <string name="arts_value" translatable="false">25</string>
+    <string name="celebrity_value" translatable="false">26</string>
+    <string name="animal_value" translatable="false">27</string>
+    <string name="vehicles_value" translatable="false">28</string>
+    <string name="entertainment_comics_value" translatable="false">29</string>
+    <string name="science_gadgets_value" translatable="false">30</string>
+    <string name="entertainment_japanese_value" translatable="false">31</string>
+    <string name="entertainment_cartoon_value" translatable="false">32</string>
 
 
     // list preference key and title
@@ -47,7 +81,6 @@
     <string name="category_key" translatable="false">category</string>
 
     <string name="filter">Filter</string>
-
 
 
 </resources>

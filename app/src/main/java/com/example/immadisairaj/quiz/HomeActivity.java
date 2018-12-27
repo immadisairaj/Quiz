@@ -33,6 +33,9 @@ public class HomeActivity extends AppCompatActivity  {
     Question q;
     String difficulty;
     String category;
+    private int max=32;
+    private int min=9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,12 +75,18 @@ public class HomeActivity extends AppCompatActivity  {
                 getString(R.string.medium_value)
         );
 
+        int category_value=Integer.valueOf(category);
+        if(category_value==8) {
+            Random foo = new Random();
+            category_value = foo.nextInt((max + 1) - min) + min;
+        }
+        
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Api api = retrofit.create(Api.class);
-        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple", Integer.valueOf(category));
+        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple",category_value );
         call.enqueue(new Callback<QuizQuestions>() {
             @Override
             public void onResponse(Call<QuizQuestions> call, Response<QuizQuestions> response) {
