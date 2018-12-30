@@ -28,6 +28,7 @@ public class QuizActivity extends AppCompatActivity {
     Question qAndA = new Question();
 
     int ques, score, ans, nextC;
+    float percentage;
     boolean submit;
 
     ArrayList<Integer> Answers;
@@ -254,7 +255,7 @@ public class QuizActivity extends AppCompatActivity {
         if (submit)
             checkScore();
         submit = false;
-
+        percentage = (float)(score*100)/qAndA.question.size();
         prevButton.setVisibility(View.INVISIBLE);
         opA.setClickable(false);
         opB.setClickable(false);
@@ -269,7 +270,7 @@ public class QuizActivity extends AppCompatActivity {
         progressBar.setSecondaryProgress(10);
         progressBar.setProgress(score);
         progressBar.setProgressDrawable(drawable);
-        textView.setText(score + "0%");
+        textView.setText((int)percentage + "%");
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("RESULT");
         alert.setMessage("You scored "+score + " out of " + qAndA.question.size()+" questions.");
