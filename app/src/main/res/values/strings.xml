@@ -51,7 +51,7 @@
     <string name="history_value" translatable="false">23</string>
     <string name="sports_value" translatable="false">21</string>
     <string name="geography_value" translatable="false">22</string>
-    <string name="any_category_value" translatable="false">8</string>
+    <string name="any_category_value" translatable="false">0</string>
     <string name="entertainment_film_value" translatable="false">11</string>
     <string name="entertainment_books_value" translatable="false">10</string>
     <string name="entertainment_music_value" translatable="false">12</string>
