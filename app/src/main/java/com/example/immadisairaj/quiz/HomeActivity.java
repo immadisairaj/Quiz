@@ -33,8 +33,6 @@ public class HomeActivity extends AppCompatActivity  {
     Question q;
     String difficulty;
     String category;
-    private int max=32;
-    private int min=9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +74,6 @@ public class HomeActivity extends AppCompatActivity  {
         );
 
         int category_value=Integer.valueOf(category);
-        if(category_value==8) {
-            Random foo = new Random();
-            category_value = foo.nextInt((max + 1) - min) + min;
-        }
-        
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
