@@ -33,7 +33,6 @@ public class HomeActivity extends AppCompatActivity  {
     Question q;
     String difficulty;
     String category;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
