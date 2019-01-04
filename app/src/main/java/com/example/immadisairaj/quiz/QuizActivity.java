@@ -66,7 +66,6 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         ButterKnife.bind(this);
-//        qAndA= (Question)getIntent().getExtras().getSerializable("question");
         Intent i = getIntent();
         qAndA = (Question) i.getSerializableExtra("question");
         q_nos = "Question: " + 1 + "/" + qAndA.question.size();
@@ -266,8 +265,8 @@ public class QuizActivity extends AppCompatActivity {
         final ProgressBar progressBar = alertLayout.findViewById(R.id.circularProgressbar);
         final TextView textView = alertLayout.findViewById(R.id.tv);
         Drawable drawable = getResources().getDrawable(R.drawable.circular);
-        progressBar.setMax(10);
-        progressBar.setSecondaryProgress(10);
+        progressBar.setMax(qAndA.question.size());
+        progressBar.setSecondaryProgress(qAndA.question.size());
         progressBar.setProgress(score);
         progressBar.setProgressDrawable(drawable);
         textView.setText((int)percentage + "%");

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_label">
+        <item>@string/easy</item>
+        <item>@string/medium</item>
+        <item>@string/hard</item>
+    </string-array>
+
+    <string-array name="values">
+        <item>@string/easy_value</item>
+        <item>@string/medium_value</item>
+        <item>@string/hard_value</item>
+    </string-array>
+
+    <string-array name="list_label2">
+        <item>@string/any_category</item>
+        <item>@string/gk</item>
+        <item>@string/entertainment_books</item>
+        <item>@string/entertainment_film</item>
+        <item>@string/entertainment_music</item>
+        <item>@string/entertainment_musical_theatres</item>
+        <item>@string/entertainment_television</item>
+        <item>@string/entertainment_video</item>
+        <item>@string/entertainment_board</item>
+        <item>@string/science_nature</item>
+        <item>@string/science_computer</item>
+        <item>@string/science_maths</item>
+        <item>@string/mythology</item>
+        <item>@string/sports</item>
+        <item>@string/geography</item>
+        <item>@string/history</item>
+        <item>@string/politics</item>
+        <item>@string/arts</item>
+        <item>@string/celebrity</item>
+        <item>@string/animal</item>
+        <item>@string/vehicles</item>
+        <item>@string/entertainment_comics</item>
+        <item>@string/science_gadgets</item>
+        <item>@string/entertainment_japanese</item>
+        <item>@string/entertainment_cartoon</item>
+    </string-array>
+
+    <integer-array name="values2">
+        <item>@string/any_category_value</item>
+        <item>@string/gk_value</item>
+        <item>@string/entertainment_books_value</item>
+        <item>@string/entertainment_film_value</item>
+        <item>@string/entertainment_music_value</item>
+        <item>@string/entertainment_musical_theatres_value</item>
+        <item>@string/entertainment_television_value</item>
+        <item>@string/entertainment_video_value</item>
+        <item>@string/entertainment_board_value</item>
+        <item>@string/science_nature_value</item>
+        <item>@string/science_computer_value</item>
+        <item>@string/science_maths_value</item>
+        <item>@string/mythology_value</item>
+        <item>@string/sports_value</item>
+        <item>@string/geography_value</item>
+        <item>@string/history_value</item>
+        <item>@string/politics_value</item>
+        <item>@string/arts_value</item>
+        <item>@string/celebrity_value</item>
+        <item>@string/animal_value</item>
+        <item>@string/vehicles_value</item>
+        <item>@string/entertainment_comics_value</item>
+        <item>@string/science_gadgets_value</item>
+        <item>@string/entertainment_japanese_value</item>
+        <item>@string/entertainment_cartoon_value</item>
+
+    </integer-array>
+</resources>

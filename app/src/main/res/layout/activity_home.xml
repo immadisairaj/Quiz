@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
 
 
@@ -21,8 +21,8 @@
         style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="69dp"
         android:layout_height="66dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:visibility="invisible" />
 
     <Button
@@ -30,9 +30,20 @@
         android:layout_width="280dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:background="@android:color/white"
         android:text="@string/take_quiz"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/home_filter"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
+        android:background="@drawable/roundable2"
+        android:text="@string/filter"
         android:textColor="@color/colorPrimaryDark"
         android:visibility="visible" />
 
