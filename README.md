@@ -57,7 +57,7 @@ Used Encoding `encode=url3986`
 
 <table>
   <tr>
-    <td><img src="/screenshots/Screenshot_3.png" height = "480" width="270"></td>
+    <td><img src="/screenshots/1.jpg" height = "480" width="270"></td>
     <td><img src="/screenshots/Screenshot_4.png" height = "480" width="270"></td>
     <td><img src="/screenshots/Screenshot_5.png" height = "480" width="270"></td>
     
