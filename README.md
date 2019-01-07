@@ -57,18 +57,19 @@ Used Encoding `encode=url3986`
 
 <table>
   <tr>
-    <td><img src="/screenshots/Screenshot_3.png" height = "480" width="270"></td>
-    <td><img src="/screenshots/Screenshot_4.png" height = "480" width="270"></td>
-    <td><img src="/screenshots/Screenshot_5.png" height = "480" width="270"></td>
+    <td><img src="/screenshots/1.jpg" height = "480" width="270"></td>
+    <td><img src="/screenshots/2.jpg" height = "480" width="270"></td>
+    <td><img src="/screenshots/3.jpg" height = "480" width="270"></td>
     
   </tr>
   <tr>
-    <td><img src="/screenshots/Screenshot_6.png" height = "480" width="270"></td>
-    <td><img src="/screenshots/Screenshot_7.png" height = "480" width="270"></td>
-    <td><img src="/screenshots/Screenshot_8.png" height = "480" width="270"></td>
+    <td><img src="/screenshots/4.jpg" height = "480" width="270"></td>
+    <td><img src="/screenshots/5.jpg" height = "480" width="270"></td>
+    <td><img src="/screenshots/6.jpg" height = "480" width="270"></td>
   </tr>
   <tr>
-    <td><img src="/screenshots/Screenshot_9.png" height = "480" width="270"></td>
+    <td><img src="/screenshots/7.jpg" height = "480" width="270"></td>
+    <td><img src="/screenshots/8.jpg" height = "480" width="270"></td>
   </tr>
 </table>
 
