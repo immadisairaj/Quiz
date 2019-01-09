@@ -27,7 +27,7 @@ git clone https://github.com/username/Quiz.git
 
 2. Open Android Studio, you will see a Welcome to Android window. Under Quick Start, select _Import Project (Eclipse ADT, Gradle, etc.)_
 
-3. Navigate to the directory where you saved the susi_android project, select the root folder of the project (the folder named "Quiz"), and hit OK. Android Studio should now begin building the project with Gradle.
+3. Navigate to the directory where you saved the Quiz project, select the root folder of the project (the folder named "Quiz"), and hit OK. Android Studio should now begin building the project with Gradle.
 
 4. Once this process is complete and Android Studio opens, check the Console for any build errors.
 
