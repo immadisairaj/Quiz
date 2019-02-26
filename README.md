@@ -29,6 +29,8 @@ A native Android app using Java for writing code.
 git clone https://github.com/username/Quiz.git 
 ```
 
+First time contributors can read [CONTRIBUTION.md](https://github.com/immadisairaj/Quiz/blob/development/CONTRIBUTING.md) file for help regarding creating issues and sending pull requests.
+
 ### Setting up the Android Project
 
 1. Download the Quiz project source. You can do this either by forking and cloning the repository (recommended if you plan on pushing changes) or by downloading it as a ZIP file and extracting it.
