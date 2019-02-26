@@ -1,18 +1,17 @@
 # Quiz Android App
 
+[![Watchers](https://img.shields.io/github/watchers/immadisairaj/Quiz.svg?style=social&label=Watchers&maxAge=2592000)](https://GitHub.com/immadisairaj/Quiz/watchers/)
+[![Star Gazers](https://img.shields.io/github/stars/immadisairaj/Quiz.svg?style=social&label=Stars&maxAge=2592000)](https://GitHub.com/immadisairaj/Quiz/stargazers/)
+[![Forks](https://img.shields.io/github/forks/immadisairaj/Quiz.svg?style=social&label=Forks&maxAge=2592000)](https://GitHub.com/immadisairaj/Quiz/network/members/)
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Gitter](https://badges.gitter.im/immadisairaj/Quiz.svg)](https://gitter.im/immadisairaj/Quiz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/immadisairaj/Quiz.svg?branch=master)](https://travis-ci.org/immadisairaj/Quiz)
 [![codecov](https://codecov.io/gh/immadisairaj/Quiz/branch/master/graph/badge.svg)](https://codecov.io/gh/immadisairaj/Quiz)
-
-
-[![Open Issues][issues-badge]][issues]
-[![PRs][pr-badge]][prs]
-[![Contributors][contributors-badge]][contributors]
-
-[![Watchers][watchers-badge]][watchers]
-[![Star Gazers][stars-badge]][stargazers]
-[![Forks][forks-badge]][forks]
+[![Open Issues](https://img.shields.io/github/issues/immadisairaj/Quiz.svg)](https://GitHub.com/immadisairaj/Quiz/issues/)
+[![PRs](https://img.shields.io/github/issues-pr/immadisairaj/Quiz.svg)](https://GitHub.com/immadisairaj/Quiz/pulls/)
+[![Contributors](https://img.shields.io/github/contributors/immadisairaj/Quiz.svg)](https://GitHub.com/immadisairaj/Quiz/graphs/contributors/)
 
 ## Communication
 
