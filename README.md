@@ -5,6 +5,15 @@
 [![Build Status](https://travis-ci.org/immadisairaj/Quiz.svg?branch=master)](https://travis-ci.org/immadisairaj/Quiz)
 [![codecov](https://codecov.io/gh/immadisairaj/Quiz/branch/master/graph/badge.svg)](https://codecov.io/gh/immadisairaj/Quiz)
 
+
+[![Open Issues][issues-badge]][issues]
+[![PRs][pr-badge]][prs]
+[![Contributors][contributors-badge]][contributors]
+
+[![Watchers][watchers-badge]][watchers]
+[![Star Gazers][stars-badge]][stargazers]
+[![Forks][forks-badge]][forks]
+
 ## Communication
 
 Our chat channel is on gitter [here](https://gitter.im/immadisairaj/Quiz)
