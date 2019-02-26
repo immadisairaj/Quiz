@@ -85,8 +85,7 @@ Used Encoding `encode=url3986`
 
 ## Built With
 
-- Android Studio (version: 3.2.1)
-- Ubuntu 18.O4
+- Android Studio
 
 ## Code of Conduct
 
