@@ -29,7 +29,7 @@ A native Android app using Java for writing code.
 git clone https://github.com/username/Quiz.git 
 ```
 
-First time contributors can read [CONTRIBUTION.md](https://github.com/immadisairaj/Quiz/blob/development/CONTRIBUTING.md) file for help regarding creating issues and sending pull requests.
+First time contributors can read [CONTRIBUTION.md](https://github.com/immadisairaj/Quiz/blob/master/CONTRIBUTING.md) file for help regarding creating issues and sending pull requests.
 
 ### Setting up the Android Project
 
