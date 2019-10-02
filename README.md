@@ -85,7 +85,8 @@ Used Encoding `encode=url3986`
 
 ## Built With
 
-- Android Studio
+- Android Studio 3.4.1
+- Gradle 3.2.1
 
 ## Code of Conduct
 
