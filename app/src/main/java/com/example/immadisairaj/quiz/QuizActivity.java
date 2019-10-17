@@ -248,9 +248,8 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    public void clickSubmit(View view) {
+    public void submit(View view){
         clickNext(view);
-
         if (submit)
             checkScore();
         submit = false;
@@ -270,7 +269,9 @@ public class QuizActivity extends AppCompatActivity {
         progressBar.setProgress(score);
         progressBar.setProgressDrawable(drawable);
         textView.setText((int)percentage + "%");
+
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
         alert.setTitle("RESULT");
         alert.setMessage("You scored "+score + " out of " + qAndA.question.size()+" questions.");
         alert.setView(alertLayout);
@@ -293,6 +294,27 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
         AlertDialog dialog = alert.create();
+        dialog.show();
+    }
+
+    public void clickSubmit(final View view) {
+        AlertDialog.Builder alertConfirm = new AlertDialog.Builder(this);
+        alertConfirm.setTitle("Confirm Submission");
+        alertConfirm.setMessage("Do you want to submit quiz?");
+        alertConfirm.setCancelable(true);
+        alertConfirm.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alertConfirm.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                submit(view);
+            }
+        });
+        AlertDialog dialog = alertConfirm.create();
         dialog.show();
     }
 
