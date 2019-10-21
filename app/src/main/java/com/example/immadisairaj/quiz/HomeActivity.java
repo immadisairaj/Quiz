@@ -37,11 +37,36 @@ public class HomeActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        setFilterDefaultValues();
         start=findViewById(R.id.home_start);
         filter=findViewById(R.id.home_filter);
         progressBar=findViewById(R.id.progressBar2);
         start.setOnClickListener(onClickListener);
         filter.setOnClickListener(onClickListener);
+    }
+
+    private void setFilterDefaultValues() {
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        difficulty=sharedPrefs.getString(
+                getString(R.string.difficulty_key),
+                null
+        );
+        category=sharedPrefs.getString(
+                getString(R.string.category_key),
+                null
+        );
+        if (difficulty == null){
+            sharedPrefs
+                    .edit()
+                    .putString(getString(R.string.difficulty_key),getString(R.string.easy_value))
+                    .apply();
+        }
+        if (category == null){
+            sharedPrefs
+                    .edit()
+                    .putString(getString(R.string.category_key),getString(R.string.any_category_value))
+                    .apply();
+        }
     }
 
     View.OnClickListener onClickListener=new View.OnClickListener() {
