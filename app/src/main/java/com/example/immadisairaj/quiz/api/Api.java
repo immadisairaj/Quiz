@@ -15,4 +15,9 @@ public interface Api {
             @Query("difficulty") String difficulty,
             @Query("type") String type,
             @Query("category") Integer category);
+
+    @GET("api_count.php")
+    Call<ApiCount> getQuizQuestions(
+            @Query("category") Integer category);
+
 }

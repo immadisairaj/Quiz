@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.immadisairaj.quiz.api.Api;
+import com.example.immadisairaj.quiz.api.ApiCount;
 import com.example.immadisairaj.quiz.api.QuizQuestions;
 import com.example.immadisairaj.quiz.api.Result;
 import com.example.immadisairaj.quiz.question.Question;
@@ -43,6 +44,17 @@ public class HomeActivity extends AppCompatActivity  {
         progressBar=findViewById(R.id.progressBar2);
         start.setOnClickListener(onClickListener);
         filter.setOnClickListener(onClickListener);
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        category=sharedPrefs.getString(
+                getString(R.string.category_key),
+                getString(R.string.medium_value)
+        );
+
+        difficulty=sharedPrefs.getString(
+                getString(R.string.difficulty_key),
+                getString(R.string.medium_value)
+        );
     }
 
     private void setFilterDefaultValues() {
@@ -76,7 +88,7 @@ public class HomeActivity extends AppCompatActivity  {
                 progressBar.setVisibility(View.VISIBLE);
                 q=new Question(getApplicationContext());
                 view.setClickable(false);
-                fetchApi();
+                fetchQuestionCount();
             }
             else if(view.getId()==R.id.home_filter){
                 Intent intent=new Intent(getApplicationContext(),SettingActivity.class);
@@ -86,24 +98,48 @@ public class HomeActivity extends AppCompatActivity  {
         }
     };
 
-    public void fetchApi() {
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        difficulty=sharedPrefs.getString(
-                getString(R.string.difficulty_key),
-                getString(R.string.medium_value)
-        );
-        category=sharedPrefs.getString(
-                getString(R.string.category_key),
-                getString(R.string.medium_value)
-        );
+    private void fetchQuestionCount() {
+        int category_value=Integer.valueOf(category);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Api.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        Api api = retrofit.create(Api.class);
+        Call<ApiCount> call = api.getQuizQuestions(category_value);
+        call.enqueue(new Callback<ApiCount>() {
+            @Override
+            public void onResponse(Call<ApiCount> call, Response<ApiCount> response) {
+                switch (difficulty){
+                    case "easy" :
+                        fetchQuestionAPI(response.body().getCategoryQuestionCount().getTotalEasyQuestionCount());
+                        break;
+                    case "medium" :
+                        fetchQuestionAPI(response.body().getCategoryQuestionCount().getTotalMediumQuestionCount());
+                        break;
+                    case "hard" :
+                        fetchQuestionAPI(response.body().getCategoryQuestionCount().getTotalHardQuestionCount());
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ApiCount> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.INVISIBLE);
+                start.setClickable(true);
+            }
+        });
+    }
+
+    public void fetchQuestionAPI(int categoryCount) {
         int category_value=Integer.valueOf(category);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Api api = retrofit.create(Api.class);
-        Call<QuizQuestions> call = api.getQuizQuestions("url3986", 10, difficulty, "multiple",category_value );
+        Call<QuizQuestions> call = api.getQuizQuestions("url3986", categoryCount >= 10 ? 10 : categoryCount-1, difficulty, "multiple",category_value );
         call.enqueue(new Callback<QuizQuestions>() {
             @Override
             public void onResponse(Call<QuizQuestions> call, Response<QuizQuestions> response) {
@@ -143,7 +179,6 @@ public class HomeActivity extends AppCompatActivity  {
 
             @Override
             public void onFailure(Call<QuizQuestions> call, Throwable t) {
-
                 Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.INVISIBLE);
                 start.setClickable(true);
